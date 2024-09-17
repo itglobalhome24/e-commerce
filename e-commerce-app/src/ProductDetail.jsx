@@ -1,7 +1,16 @@
-import React from 'react'
-import ProductCard from './components/ProductCard'
+import React, { useEffect } from 'react'
 
-const Products = (props) => {
+const ProductDetail = (props) => {
+    console.log(props.category, props.productID, "from ProductDetails")
+
+
+    async function handleAddToCart(category, product) {
+        const updatedCart = [...props.cart, { category: category, productID: product }]
+        console.log(updatedCart, "Updated cart from product details")
+        props.setCart(updatedCart)
+        console.log(props.cart, "cart from product details")
+    }
+
     let sampleCatalog = [
         [
             {
@@ -126,14 +135,18 @@ const Products = (props) => {
     ]
 
     return (
-        <div className='w-full h-full box-border'>
-            {sampleCatalog[props.category].map(function (data, index) {
-                return (
-                    <ProductCard key={index} product_id={data.id} name={data.product_name} price={data.price} image_url={data.image_url} setProductID={props.setProductID} />
-                )
-            })}
+        <div>
+            <div className='inline-block w-1/2'>
+                <img src={sampleCatalog[props.category][props.productID].image_url} className='w-3/5 h-auto my-12 mx-auto' />
+            </div>
+            <div className='inline-block box-border w-1/2 align-top p-36'>
+                <h2 className='font-bold text-5xl mb-7'>{sampleCatalog[props.category][props.productID].product_name}</h2>
+                <p className='inline-block text-3xl mb-11'>$ {sampleCatalog[props.category][props.productID].price}</p>
+                <p className='inline-block text-2xl mb-7'>{sampleCatalog[props.category][props.productID].description}</p>
+                <button onClick={() => handleAddToCart(props.category, props.productID)} className='w-20 h-9 bg-green-400'>Add</button>
+            </div>
         </div>
     )
 }
 
-export default Products
+export default ProductDetail

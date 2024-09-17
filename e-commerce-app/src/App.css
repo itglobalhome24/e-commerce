@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 * {
-    outline: 1px dotted greenyellow;
+    outline: 1px dotted green;
 }
