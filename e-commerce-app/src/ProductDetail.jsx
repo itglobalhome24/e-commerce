@@ -1,23 +1,11 @@
-import React, { useEffect } from 'react'
-import { useContext } from 'react'
+import { React, useContext } from 'react'
 import { Context } from './context/Context'
 
 const ProductDetail = (props) => {
-    const { productDetails, addToCart, cartProducts } = useContext(Context)
-
-    // async function handleAddToCart(category, product) {
-    //     const updatedCart = [...props.cart, { category: category, productID: product }]
-    //     console.log(updatedCart, "Updated cart from product details")
-    //     await props.setCart(updatedCart)
-    //     console.log(props.cart, "cart from product details")
-    // }
+    const { productDetails, addToCart } = useContext(Context)
 
     function handleAddToCart(productDetails) {
         addToCart(productDetails)
-    }
-
-    function checkCartProducts() {
-        console.log(cartProducts)
     }
 
     return (
@@ -30,7 +18,6 @@ const ProductDetail = (props) => {
                 <p className='inline-block text-3xl mb-11'>$ {productDetails[0].price}</p>
                 <p className='inline-block text-2xl mb-7'>{productDetails[0].description}</p>
                 <button onClick={() => handleAddToCart(productDetails[0])} className='w-20 h-9 bg-green-400'>Add</button>
-                <button onClick={() => checkCartProducts()} className='w-20 h-9 bg-green-400'>Check</button>
             </div>
         </div>
     )

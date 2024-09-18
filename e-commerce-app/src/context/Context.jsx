@@ -1,9 +1,17 @@
 import { createContext, useEffect, useState } from 'react'
 import { productList, categoryList } from '../assets/products.js'
+import { usersList } from '../assets/users.js'
 
 export const Context = createContext()
 
 export const ContextProvider = ({ children }) => {
+    // useState for userData
+    const user = localStorage.getItem("userData")
+    const activeUser = user ? JSON.parse(user) : []
+    const [userData, setUserData] = useState(activeUser)
+
+    const [users, setUsers] = useState(usersList)
+
     // useState for Product List
     const [products, setProducts] = useState(productList)
 
@@ -16,13 +24,24 @@ export const ContextProvider = ({ children }) => {
     // useState for Product Detail
     const [productDetails, setProductDetails] = useState()
 
-    // // useState for Cart Products
-    // const [cartProducts, setCartProducts] = useState([])
+    // userValidation
+    function userValidation(email, password) {
+        const user = users.find(users => users.email === email)
+        if (user) {
+            localStorage.setItem("userData", JSON.stringify(user))
+            setUserData(user)
+            return true
+        } else {
+            return false
+        }
 
-    const item = localStorage.getItem("cartProducts")
-    const result = item ? JSON.parse(item) : []
-
+    }
+    // useState for Cart Products
+    const items = localStorage.getItem("cartProducts")
+    const result = items ? JSON.parse(items) : []
     const [cartProducts, setCartProducts] = useState(result)
+
+    // Update cartProducts on localStorage
     useEffect(() => {
         localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
     }, [cartProducts])
@@ -32,6 +51,7 @@ export const ContextProvider = ({ children }) => {
         const isItemInCart = cartProducts.find((cartItem) => cartItem.id === item.id) // check if the item is already in the cart
 
         if (isItemInCart) {
+
             setCartProducts(
                 cartProducts.map((cartItem) => // if the item is already in the cart, increase the quantity of the item
                     cartItem.id === item.id
@@ -42,6 +62,7 @@ export const ContextProvider = ({ children }) => {
         } else {
             setCartProducts([...cartProducts, { ...item, quantity: 1 }]) // if the item is not in the cart, add the item to the cart
         }
+        console.log(isItemInCart)
     }
 
     // Remove from cart function
@@ -66,29 +87,21 @@ export const ContextProvider = ({ children }) => {
         setCartProducts([]) // set the cart items to an empty array
     }
 
+    // Update userData on localStorage.
+    useEffect(() => {
+        console.log(userData, "from useEffect of userData")
+        localStorage.setItem("userData", JSON.stringify(userData))
+    }, [userData])
+
     // Set products to localStorage on the first render.
     useEffect(() => {
         localStorage.setItem("products", JSON.stringify(productList))
     }, [])
 
-    // // Get cart products from the localStorage on the first render.
-    // useEffect(() => {
-    //     const cartProducts = localStorage.getItem("cartProducts")
-    //     if (cartProducts) {
-    //         setCartProducts(JSON.parse(cartProducts))
-    //     }
-    // }, [])
-
     // Update productDetails on localStorage everytime productDetails change.
     useEffect(() => {
         localStorage.setItem("productDetials", JSON.stringify(productDetails))
     }, [[productDetails]])
-
-    // // Update cart products on localStorage everytime cartProducts change.
-    // useEffect(() => {
-    //     localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
-    // }, [cartProducts])
-
 
     const filterByCategory = (category) => {
         const filteredProductsByCategory = JSON.parse(localStorage.getItem("products")).filter(products => products.category === category)
@@ -105,6 +118,9 @@ export const ContextProvider = ({ children }) => {
     return (
         <Context.Provider
             value={{
+                userData,
+                setUserData,
+                userValidation,
                 products,
                 setProducts,
                 categories,

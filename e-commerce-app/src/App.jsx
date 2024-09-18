@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {
   BrowserRouter,
   Routes,
@@ -16,30 +15,23 @@ import Navbar from "./components/Navbar"
 import "./App.css"
 
 function App() {
-  const [email, setEmail] = useState("")
-  const [cart, setCart] = useState([])
-
-  // TEMPORARY USESTATE FOR PRODUCT DETAIL PAGE
-  const [productID, setProductID] = useState()
-
   return (
     <ContextProvider>
       <BrowserRouter>
         <div className='h-screen'>
-          <Navbar setEmail={setEmail} email={email} />
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login setEmail={setEmail} />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/products" element={<Categories setCart={setCart} />} />
-            <Route path="/products/category" element={<Products setProductID={setProductID} />} />
-            <Route path="/products/detail" element={<ProductDetail productID={productID} setCart={setCart} cart={cart} />} />
+            <Route path="/products" element={<Categories />} />
+            <Route path="/products/category" element={<Products />} />
+            <Route path="/products/detail" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       </BrowserRouter>
     </ContextProvider>
-
   )
 }
 
