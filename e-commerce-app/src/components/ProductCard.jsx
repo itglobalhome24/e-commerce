@@ -13,11 +13,24 @@ const ProductCard = (props) => {
     }
 
     return (
-        <div onClick={() => handleClickProduct(product_id)} className='align-top box-border rounded-xl border-gray-700 border-2 inline-block w-80 h-80 p-3 text-center m-6'>
-            <img src={image_url} className='w-4/5 h-2/3 my-3 mx-auto' />
-            <p className='inline-block text-xl font-semibold mr-3'>{name}</p>
-            <p className='inline-block text-xl font-semibold mr-3'>Php {price}</p>
-        </div>
+        <>
+            <div className="bg-white shadow rounded overflow-hidden group">
+                <div onClick={() => handleClickProduct(product_id)} className="relative h-3/5">
+                    <img src={image_url} className="w-full h-full" />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
+                    justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                    </div>
+                </div>
+                <div className="pt-4 pb-3 px-4">
+                    <h4 onClick={() => handleClickProduct(product_id)} className="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">{name}</h4>
+                    <div className="flex items-baseline mb-1 space-x-2">
+                        <p className="text-xl text-primary font-semibold">₱ {price}</p>
+                    </div>
+                </div>
+                <a href="#" className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">See details</a>
+            </div>
+        </>
+
     )
 }
 

@@ -21,10 +21,16 @@ export const ContextProvider = ({ children }) => {
     // useState for filtered Product List
     const [filteredProducts, setFilteredProducts] = useState([])
 
-    // useState for Product Detail
-    const [productDetails, setProductDetails] = useState()
+    // useState for selected Category
+    const [selectedCategory, setSelectedCategory] = useState("")
 
-    // userValidation
+    // useState for Product Detail
+    const getProductDetails = localStorage.getItem("productDetails")
+    const activeProductDetails = getProductDetails ? JSON.parse(getProductDetails) : []
+    const [productDetails, setProductDetails] = useState(activeProductDetails)
+
+
+    // Login userValidation
     function userValidation(email, password) {
         const user = users.find(users => users.email === email)
         if (user) {
@@ -34,8 +40,14 @@ export const ContextProvider = ({ children }) => {
         } else {
             return false
         }
-
     }
+
+    // Logout userData
+    function logoutUser() {
+        setUserData(null)
+        localStorage.setItem("userData", null)
+    }
+
     // useState for Cart Products
     const items = localStorage.getItem("cartProducts")
     const result = items ? JSON.parse(items) : []
@@ -51,7 +63,6 @@ export const ContextProvider = ({ children }) => {
         const isItemInCart = cartProducts.find((cartItem) => cartItem.id === item.id) // check if the item is already in the cart
 
         if (isItemInCart) {
-
             setCartProducts(
                 cartProducts.map((cartItem) => // if the item is already in the cart, increase the quantity of the item
                     cartItem.id === item.id
@@ -100,10 +111,12 @@ export const ContextProvider = ({ children }) => {
 
     // Update productDetails on localStorage everytime productDetails change.
     useEffect(() => {
-        localStorage.setItem("productDetials", JSON.stringify(productDetails))
+        localStorage.setItem("productDetails", JSON.stringify(productDetails))
+        console.log(productDetails, "productDetails from context")
     }, [[productDetails]])
 
     const filterByCategory = (category) => {
+        setSelectedCategory(category)
         const filteredProductsByCategory = JSON.parse(localStorage.getItem("products")).filter(products => products.category === category)
         localStorage.setItem("filteredProducts", JSON.stringify(filteredProductsByCategory))
         setFilteredProducts(JSON.parse(localStorage.getItem("filteredProducts")))
@@ -121,12 +134,15 @@ export const ContextProvider = ({ children }) => {
                 userData,
                 setUserData,
                 userValidation,
+                logoutUser,
                 products,
                 setProducts,
                 categories,
                 setCategories,
                 filteredProducts,
                 setFilteredProducts,
+                selectedCategory,
+                setSelectedCategory,
                 filterByCategory,
                 productDetails,
                 setProductDetails,
