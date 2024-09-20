@@ -1,6 +1,5 @@
 import React from 'react'
-import "./App.css"
-import homepage_img from "../src/assets/homepage_promo.webp"
+import homepage_img from "../../assets/homepage_promo.webp"
 
 const Home = () => {
     return (

@@ -1,6 +1,6 @@
 import { React, useContext } from 'react'
-import ProductCard from './components/ProductCard'
-import { Context } from './context/Context'
+import ProductCard from '../../components/ProductCard'
+import { Context } from '../../context/Context'
 
 const Products = (props) => {
     const { filteredProducts, selectedCategory } = useContext(Context)

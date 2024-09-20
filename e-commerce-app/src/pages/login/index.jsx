@@ -1,6 +1,6 @@
 import { React, useState, useContext } from 'react'
 import { useNavigate } from "react-router-dom"
-import { Context } from './context/Context'
+import { Context } from '../../context/Context'
 
 const Login = (props) => {
     const { userValidation, userData } = useContext(Context)
