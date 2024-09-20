@@ -1,10 +1,10 @@
 import { React, useContext } from 'react'
-import { Context } from '../context/Context'
+import ProductContext from '../context/ProductContext'
 import { useNavigate } from "react-router-dom"
 
 const CategoryCard = (props) => {
     const { image_url, title } = props
-    const { filterByCategory } = useContext(Context)
+    const { filterByCategory } = useContext(ProductContext)
     const navigate = useNavigate()
 
     function handleClickCategory(category) {

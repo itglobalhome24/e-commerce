@@ -1,9 +1,9 @@
 import { React, useContext } from 'react'
 import ProductCard from '../../components/ProductCard'
-import { Context } from '../../context/Context'
+import ProductContext from '../../context/ProductContext'
 
 const Products = (props) => {
-    const { filteredProducts, selectedCategory } = useContext(Context)
+    const { filteredProducts, selectedCategory } = useContext(ProductContext)
 
     return (
         <div className='container py-16'>

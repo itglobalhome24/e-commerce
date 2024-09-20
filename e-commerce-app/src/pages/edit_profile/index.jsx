@@ -1,8 +1,9 @@
 import { React, useContext } from 'react'
 import { Context } from '../../context/Context'
+import UserContext from '../../context/UserContext'
 
 const EditProfile = () => {
-    const { userData } = useContext(Context)
+    const { userData } = useContext(UserContext)
 
     return (
         <div className="container grid grid-cols-12 items-start gap-6 pt-4 pb-16 mt-9">

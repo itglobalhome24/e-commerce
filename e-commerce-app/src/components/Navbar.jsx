@@ -1,8 +1,8 @@
 import { React, useContext } from 'react'
-import { Context } from '../context/Context'
+import UserContext from '../context/UserContext'
 
 const Navbar = (props) => {
-    const { userData, logoutUser } = useContext(Context)
+    const { userData, logoutUser } = useContext(UserContext)
 
     async function handleLogout() {
         // register user to backend.

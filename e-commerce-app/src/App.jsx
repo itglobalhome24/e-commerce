@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { ContextProvider } from './context/Context'
+import { ProductContextProvider } from "./context/ProductContext"
+import { CartContextProvider } from "./context/CartContext"
+import { UserContextProvider } from "./context/UserContext"
 import Home from './pages/home'
 import Login from "./pages/login"
 import Register from "./pages/register"
@@ -16,24 +18,28 @@ import "./App.css"
 
 function App() {
     return (
-        <ContextProvider>
-            <BrowserRouter>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/products" element={<Categories />} />
-                    <Route path="/products/category" element={<Products />} />
-                    <Route path="/products/detail" element={<ProductDetail />} />
-                    <Route path="/cart" element={<Cart />} />
-                    <Route path="/orders" element={<OrderHistory />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/profile/edit" element={<EditProfile />} />
-                </Routes>
-                <Footer />
-            </BrowserRouter>
-        </ContextProvider>
+        <UserContextProvider>
+            <ProductContextProvider>
+                <CartContextProvider>
+                    <BrowserRouter>
+                        <Navbar />
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/register" element={<Register />} />
+                            <Route path="/products" element={<Categories />} />
+                            <Route path="/products/category" element={<Products />} />
+                            <Route path="/products/detail" element={<ProductDetail />} />
+                            <Route path="/cart" element={<Cart />} />
+                            <Route path="/orders" element={<OrderHistory />} />
+                            <Route path="/profile" element={<Profile />} />
+                            <Route path="/profile/edit" element={<EditProfile />} />
+                        </Routes>
+                        <Footer />
+                    </BrowserRouter>
+                </CartContextProvider>
+            </ProductContextProvider>
+        </UserContextProvider>
     )
 }
 

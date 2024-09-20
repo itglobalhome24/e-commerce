@@ -1,8 +1,11 @@
 import { React, useContext } from 'react'
 import { Context } from '../../context/Context'
+import ProductContext from '../../context/ProductContext'
+import { CartContext } from '../../context/CartContext'
 
 const ProductDetail = (props) => {
-    const { productDetails, addToCart } = useContext(Context)
+    const { addToCart } = useContext(CartContext)
+    const { productDetails } = useContext(ProductContext)
 
     function handleAddToCart(productDetails) {
         addToCart(productDetails)

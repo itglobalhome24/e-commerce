@@ -1,10 +1,10 @@
 import { React, useContext } from 'react'
 import { useNavigate } from "react-router-dom"
-import { Context } from '../context/Context'
+import ProductContext from '../context/ProductContext'
 
 const ProductCard = (props) => {
     const { product_id, image_url, name, price } = props
-    const { getProductDetail } = useContext(Context)
+    const { getProductDetail } = useContext(ProductContext)
     const navigate = useNavigate()
 
     function handleClickProduct(id) {

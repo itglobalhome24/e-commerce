@@ -1,8 +1,8 @@
 import { React, useContext } from 'react'
-import { Context } from '../../context/Context'
+import { CartContext } from '../../context/CartContext'
 
 const Cart = (props) => {
-    const { cartProducts, removeFromCart, clearCart } = useContext(Context)
+    const { cartProducts, removeFromCart, clearCart } = useContext(CartContext)
 
     function handleClickRemove(cartProduct) {
         removeFromCart(cartProduct)

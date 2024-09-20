@@ -1,9 +1,9 @@
 import { React, useState, useContext } from 'react'
 import { useNavigate } from "react-router-dom"
-import { Context } from '../../context/Context'
+import UserContext from '../../context/UserContext'
 
 const Login = (props) => {
-    const { userValidation, userData } = useContext(Context)
+    const { userValidation } = useContext(UserContext)
     const navigate = useNavigate()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
