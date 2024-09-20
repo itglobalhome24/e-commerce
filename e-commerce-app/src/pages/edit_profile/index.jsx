@@ -1,5 +1,4 @@
 import { React, useContext } from 'react'
-import { Context } from '../../context/Context'
 import UserContext from '../../context/UserContext'
 
 const EditProfile = () => {

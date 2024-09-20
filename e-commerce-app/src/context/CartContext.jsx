@@ -3,9 +3,10 @@ import { createContext, useEffect, useState } from 'react'
 export const CartContext = createContext()
 
 export const CartContextProvider = ({ children }) => {
+
     // useState for Cart Products
-    const items = localStorage.getItem("cartProducts")
-    const result = items ? JSON.parse(items) : []
+    const cartItems = localStorage.getItem("cartProducts")
+    const result = cartItems ? JSON.parse(cartItems) : []
     const [cartProducts, setCartProducts] = useState(result)
 
     // Update cartProducts on localStorage
@@ -28,7 +29,6 @@ export const CartContextProvider = ({ children }) => {
         } else {
             setCartProducts([...cartProducts, { ...item, quantity: 1 }]) // if the item is not in the cart, add the item to the cart
         }
-        console.log(isItemInCart)
     }
 
     // Remove from cart function

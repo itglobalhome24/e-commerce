@@ -13,7 +13,7 @@ const Cart = (props) => {
     }
 
     return (
-        <div className='container pt-4 pb-6'>
+        <div className='pt-4 pb-6 container'>
             <div className='box-border min-w-96 w-1/3 mt-14 mx-auto bg-slate-100'>
                 <div className="col-span-4 border border-gray-200 p-4 rounded">
                     <h4 className="text-gray-800 text-lg mb-4 font-medium">ORDER SUMMARY</h4>

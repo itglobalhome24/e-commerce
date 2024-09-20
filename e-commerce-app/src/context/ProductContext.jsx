@@ -30,7 +30,6 @@ export const ProductContextProvider = ({ children }) => {
     // Update productDetails on localStorage everytime productDetails change.
     useEffect(() => {
         localStorage.setItem("productDetails", JSON.stringify(productDetails))
-        console.log(productDetails, "productDetails from context")
     }, [[productDetails]])
 
     const filterByCategory = (category) => {
@@ -42,7 +41,6 @@ export const ProductContextProvider = ({ children }) => {
 
     const getProductDetail = (id) => {
         const selectedProduct = JSON.parse(localStorage.getItem("products")).filter(products => products.id === id)
-        console.log(selectedProduct)
         setProductDetails(selectedProduct)
     }
 

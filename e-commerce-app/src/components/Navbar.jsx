@@ -6,7 +6,6 @@ const Navbar = (props) => {
 
     async function handleLogout() {
         // register user to backend.
-        console.log("handle logout")
         await logoutUser()
         navigate("/")
     }
@@ -20,18 +19,18 @@ const Navbar = (props) => {
                 </div>
             </nav>
 
-            <nav className="bg-gray-800">
-                <div className="container flex h-14">
-                    <div className="flex items-center justify-between flex-grow md:pl-12 py-5">
-                        <div className="flex items-center space-x-6 capitalize">
-                            <a href="/" className="text-gray-200 hover:text-white transition">Home</a>
-                            <a href="/products" className="text-gray-200 hover:text-white transition">Products</a>
-                            <a href="#" className="text-gray-200 hover:text-white transition">About us</a>
-                            <a href="#" className="text-gray-200 hover:text-white transition">Contact us</a>
-                        </div>
+            <div className="container flex h-14 bg-gray-800">
+                <div className="flex items-center justify-between flex-grow md:pl-12 py-5">
+                    <div className="flex items-center space-x-6 capitalize">
+                        <a href="/" className="text-gray-200 hover:text-white transition">Home</a>
+                        <a href="/products" className="text-gray-200 hover:text-white transition">Products</a>
+                        <a href="" className="text-gray-200 hover:text-white transition">About us</a>
+                        <a href="" className="text-gray-200 hover:text-white transition">Contact us</a>
+                    </div>
+                    <div className="flex items-center space-x-6 capitalize">
                         {
                             userData ?
-                                <a href="/profile" className="text-gray-200 hover:text-white transition relative left-1/3">Profile</a> :
+                                <a href="/profile" className="text-gray-200 hover:text-white transition">Profile</a> :
                                 null
                         }
                         {
@@ -41,7 +40,7 @@ const Navbar = (props) => {
                         }
                     </div>
                 </div>
-            </nav>
+            </div>
         </div >
     )
 }
