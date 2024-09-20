@@ -27,7 +27,9 @@ const ProductCard = (props) => {
                         <p className="text-xl text-primary font-semibold">₱ {price}</p>
                     </div>
                 </div>
-                <a href="#" className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">See details</a>
+                <a href="" onClick={() => handleClickProduct(product_id)} className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
+                    See details
+                </a>
             </div>
         </>
 

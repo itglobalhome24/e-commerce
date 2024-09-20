@@ -34,7 +34,7 @@ const OrderHistory = () => {
                         </div>
 
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center">
-                            <p className="font-semibold text-xl leading-8 text-black">$249.99</p>
+                            <p className="font-semibold text-xl leading-8 text-black">₱ 249.99</p>
                         </div>
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center ">
                             <p className="font-semibold text-xl leading-8 text-primary">2</p>
@@ -58,7 +58,7 @@ const OrderHistory = () => {
                         </div>
 
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center">
-                            <p className="font-semibold text-xl leading-8 text-black">$249.99</p>
+                            <p className="font-semibold text-xl leading-8 text-black">₱ 249.99</p>
                         </div>
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center ">
                             <p className="font-semibold text-xl leading-8 text-primary">2</p>
@@ -82,7 +82,7 @@ const OrderHistory = () => {
                         </div>
 
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center">
-                            <p className="font-semibold text-xl leading-8 text-black">$249.99</p>
+                            <p className="font-semibold text-xl leading-8 text-black">₱ 249.99</p>
                         </div>
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center ">
                             <p className="font-semibold text-xl leading-8 text-primary">2</p>
