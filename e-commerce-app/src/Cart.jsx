@@ -22,7 +22,7 @@ const Cart = (props) => {
                             <li key={index} className="flex border-b border-gray-200 py-4 mb-4">
                                 <h5 className="text-gray-800 font-medium w-2/3">{data.title}</h5>
                                 <p className="text-gray-600 w-6">{data.quantity}</p>
-                                <p className="text-gray-800 font-medium w-14">{data.price}</p>
+                                <p className="text-gray-800 font-medium w-14">₱ {data.price}</p>
                                 <button onClick={() => handleClickRemove(data)} className='bg-red-500 text-white w-20 ml-8 rounded-sm'>Remove</button>
                             </li>
                         ))}

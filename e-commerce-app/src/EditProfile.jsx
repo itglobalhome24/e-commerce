@@ -1,7 +1,7 @@
 import { React, useContext } from 'react'
 import { Context } from './context/Context'
 
-const Profile = () => {
+const EditProfile = () => {
     const { userData } = useContext(Context)
 
     return (
@@ -28,7 +28,7 @@ const Profile = () => {
                             </span>
                             Manage account
                         </a>
-                        <a href="#" className="relative hover:text-primary block capitalize transition">
+                        <a href="/profile" className="relative hover:text-primary block capitalize transition">
                             Profile information
                         </a>
                         <a href="#" className="relative hover:text-primary block capitalize transition">
@@ -74,54 +74,49 @@ const Profile = () => {
 
             {/* Info */}
             <div className="col-span-9 shadow rounded px-6 pt-5 pb-7">
-                <h4 className="text-2xl font-medium capitalize mb-9">
+                <h4 className="text-lg font-medium capitalize mb-4">
                     Profile information
                 </h4>
-                <div className="space-y-4 mb-9">
+                <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="first" className='font-medium text-xl'>First name</label>
-                            <p className='text-xl pl-6'>{userData.first_name}</p>
+                            <label for="first">First name</label>
+                            <input type="text" name="first" id="first" className="input-box" />
                         </div>
                         <div>
-                            <label for="last" className='font-medium text-xl'>Last name</label>
-                            <p className='text-xl pl-6'>{userData.last_name}</p>
+                            <label for="last">Last name</label>
+                            <input type="text" name="last" id="last" className="input-box" />
                         </div>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="birthday" className='font-medium text-xl'>Birthday</label>
-                            <p className='text-xl pl-6'>January 1, 1999</p>
+                            <label for="birthday">Birthday</label>
+                            <input type="date" name="birthday" id="birthday" className="input-box" />
                         </div>
                         <div>
-                            <label for="gender" className='font-medium text-xl'>Gender</label>
-                            <p className='text-xl pl-6'>Male</p>
+                            <label for="gender">Gender</label>
+                            <select name="gender" id="gender" className="input-box">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
                         </div>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="email" className='font-medium text-xl'>Email Address</label>
-                            <p className='text-xl pl-6'>{userData.email}</p>
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" className="input-box" />
                         </div>
                         <div>
-                            <label for="phone" className='font-medium text-xl'>Address</label>
-                            <p className='text-xl pl-6'>{userData.delivery_address}</p>
+                            <label for="phone">Phone number</label>
+                            <input type="text" name="phone" id="phone" className="input-box" />
                         </div>
                     </div>
-                </div>
-
-                <div className="mt-4 mb-10">
-                    <h4 className="text-lg font-medium capitalize mb-4">
-                        Referral Voucher Code
-                    </h4>
-                    <p className='text-xl pl-6'>v3A2g4eaOP</p>
                 </div>
 
                 <div className="mt-4">
-                    <a href="/profile/edit"
-                        className="py-3 px-4 text-center text-white bg-primary border border-primary rounded-md hover:bg-transparent hover:text-primary transition font-medium">
-                        Edit Information
-                    </a>
+                    <button type="submit"
+                        className="py-3 px-4 text-center text-white bg-primary border border-primary rounded-md hover:bg-transparent hover:text-primary transition font-medium">Save
+                        Changes</button>
                 </div>
             </div>
             {/* Info */}
@@ -130,4 +125,4 @@ const Profile = () => {
     )
 }
 
-export default Profile
+export default EditProfile
