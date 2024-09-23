@@ -1,43 +1,46 @@
-import { useEffect, useState } from 'react'
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom"
-import Home from './Home'
-import Login from './Login'
-import Register from './Register'
-import Categories from './Categories'
-import Products from './Products'
-import ProductDetail from './ProductDetail'
-import Cart from './Cart'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { ProductContextProvider } from "./context/ProductContext"
+import { CartContextProvider } from "./context/CartContext"
+import { UserContextProvider } from "./context/UserContext"
+import Home from './pages/home'
+import Login from "./pages/login"
+import Register from "./pages/register"
+import Categories from "./pages/categories"
+import Products from "./pages/products"
+import ProductDetail from "./pages/product_detail"
+import Cart from "./pages/cart"
+import OrderHistory from "./pages/order_history"
+import Profile from "./pages/profile"
+import EditProfile from "./pages/edit_profile"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 import "./App.css"
 
 function App() {
-  const [email, setEmail] = useState("")
-  const [cart, setCart] = useState([])
-
-  // TEMPORARY USESTATE FOR PRODUCT DETAIL PAGE
-  const [productID, setProductID] = useState()
-  const [category, setCategory] = useState()
-
-  return (
-    <BrowserRouter>
-      <div className='h-screen'>
-        <Navbar setEmail={setEmail} email={email} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login setEmail={setEmail} />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/products" element={<Categories setCategory={setCategory} setCart={setCart} />} />
-          <Route path="/products/category" element={<Products category={category} setProductID={setProductID} />} />
-          <Route path="/products/detail" element={<ProductDetail productID={productID} category={category} setCart={setCart} cart={cart} />} />
-          <Route path="/cart" element={<Cart cart={cart} />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-  )
+    return (
+        <UserContextProvider>
+            <ProductContextProvider>
+                <CartContextProvider>
+                    <BrowserRouter>
+                        <Navbar />
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/register" element={<Register />} />
+                            <Route path="/products" element={<Categories />} />
+                            <Route path="/products/category" element={<Products />} />
+                            <Route path="/products/detail" element={<ProductDetail />} />
+                            <Route path="/cart" element={<Cart />} />
+                            <Route path="/orders" element={<OrderHistory />} />
+                            <Route path="/profile" element={<Profile />} />
+                            <Route path="/profile/edit" element={<EditProfile />} />
+                        </Routes>
+                        <Footer />
+                    </BrowserRouter>
+                </CartContextProvider>
+            </ProductContextProvider>
+        </UserContextProvider>
+    )
 }
 
 export default App
