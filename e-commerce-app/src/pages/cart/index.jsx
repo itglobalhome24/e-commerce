@@ -21,8 +21,8 @@ const Cart = (props) => {
                     <h4 className="text-gray-800 text-lg mb-4 font-medium">ORDER SUMMARY</h4>
                     <ul>
                         <li className="flex border-b border-gray-200">
-                            <h5 className="text-gray-800 font-semibold w-1/3 mr-16">Product</h5>
-                            <p className="text-gray-800 font-semibold w-24">Quantity</p>
+                            <h5 className="text-gray-800 font-semibold w-1/3 mr-3">Product</h5>
+                            <p className="text-gray-800 font-semibold w-20">Quantity</p>
                             <p className="text-gray-800 font-semibold w-14">Price</p>
                         </li>
                         {cartProducts.map((data, index) => (
@@ -30,7 +30,7 @@ const Cart = (props) => {
                                 <h5 className="text-gray-800 font-medium w-1/2 pt-1">{data.title}</h5>
                                 <p className="text-gray-600 w-20 text-center px-3 pt-1">{data.quantity}</p>
                                 <p className="text-gray-800 font-medium w-24 text-center px-3 pt-1">₱ {data.price}</p>
-                                <button onClick={() => handleClickRemove(data)} className='bg-primary text-white w-20 rounded-md p-1'>Remove</button>
+                                <button onClick={() => handleClickRemove(data)} className='bg-primary text-white mt-2 w-20 h-1/3 rounded-md p-1'>Remove</button>
                             </li>
                         ))}
                     </ul>
@@ -41,7 +41,7 @@ const Cart = (props) => {
                     </div>
 
                     <div className='py-3'>
-                        <p className='text-gray-800 font-medium uppercase'>People also ordered</p>
+                        <p className='text-gray-800 font-medium uppercase mb-3'>People also ordered</p>
                         <div className='flex overflow-x-auto space-x-7'>
                             {cartProducts.map((data, index) => (
                                 <SuggestionCard key={index} product_id={data.id} name={data.title} image_url={data.images[0]} />

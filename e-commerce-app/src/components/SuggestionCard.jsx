@@ -10,11 +10,11 @@ const SuggestionCard = (props) => {
     }
 
     return (
-        <div className="bg-slate-200 shadow rounded group box-border h-22 w-52 flex space-x-3 p-2">
+        <div className="bg-slate-200 shadow rounded group box-border h-22 w-72 flex space-x-2 p-2">
             <div className="inline-block w-48">
                 <img src={image_url} className="h-16 w-20" />
             </div>
-            <div className='flex items-center w-32'>
+            <div className='flex items-center w-64'>
                 <h4 className="h-8 font-medium truncate text-md text-gray-800 hover:text-primary transition">{name}</h4>
             </div>
         </div>
