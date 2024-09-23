@@ -19,7 +19,7 @@ const Login = (props) => {
     }
 
     return (
-        <div className="contain py-16">
+        <div className="container py-12">
             <div className="max-w-lg mx-auto shadow px-6 py-7 rounded overflow-hidden">
                 <h2 className="text-2xl uppercase font-medium mb-1">Login</h2>
                 <p className="text-gray-600 mb-6 text-sm">Welcome back customer!</p>
@@ -44,7 +44,7 @@ const Login = (props) => {
                                 className="text-primary focus:ring-0 rounded-sm cursor-pointer" />
                             <label for="remember" className="text-gray-600 ml-3 cursor-pointer">Remember me</label>
                         </div>
-                        <a href="#" className="text-primary">Forgot password</a>
+                        <a href="" className="text-primary">Forgot password</a>
                     </div>
                     <div className="mt-4">
                         <button

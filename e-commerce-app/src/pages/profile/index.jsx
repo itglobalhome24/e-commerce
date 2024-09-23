@@ -5,10 +5,10 @@ const Profile = () => {
     const { userData } = useContext(UserContext)
 
     return (
-        <div className="container grid grid-cols-12 items-start gap-6 pt-4 pb-16 mt-9">
+        <div className="container grid grid-cols-1 sm:grid-cols-12 items-start gap-3 pt-4 pb-16 mt-9 px-6">
 
             {/* Sidebar */}
-            <div className="col-span-3">
+            <div className="col-span-1 sm:col-span-3">
                 <div className="px-4 py-3 shadow flex items-center gap-4">
                     <div className="flex-shrink-0">
                         <img src={userData.profile_picture} alt="profile"
@@ -73,7 +73,7 @@ const Profile = () => {
             {/* Sidebar */}
 
             {/* Info */}
-            <div className="col-span-9 shadow rounded px-6 pt-5 pb-7">
+            <div className="col-span-1 sm:col-span-9 shadow rounded px-6 pt-5 pb-7">
                 <h4 className="text-2xl font-medium capitalize mb-9">
                     Profile information
                 </h4>
@@ -99,11 +99,11 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
-                        <div>
+                        <div className='col-span-2'>
                             <label for="email" className='font-medium text-xl'>Email Address</label>
                             <p className='text-xl pl-6'>{userData.email}</p>
                         </div>
-                        <div>
+                        <div className='col-span-2'>
                             <label for="phone" className='font-medium text-xl'>Address</label>
                             <p className='text-xl pl-6'>{userData.delivery_address}</p>
                         </div>

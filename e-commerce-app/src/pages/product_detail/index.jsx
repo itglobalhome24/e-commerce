@@ -11,7 +11,7 @@ const ProductDetail = (props) => {
     }
 
     return (
-        <div className="container grid sm:grid-cols-2 grid-cols-1 gap-6 mt-16">
+        <div className="container grid sm:grid-cols-2 grid-cols-1 gap-6 p-5">
             <div>
                 <img src={productDetails[0].images[0]} alt="product" className="w-full" />
             </div>

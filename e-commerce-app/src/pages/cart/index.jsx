@@ -13,8 +13,8 @@ const Cart = (props) => {
     }
 
     return (
-        <div className='pt-4 pb-6 container'>
-            <div className='box-border min-w-96 w-1/3 mt-14 mx-auto bg-slate-100'>
+        <div className='container'>
+            <div className='box-border min-w-96 w-1/3 my-10 mx-auto bg-slate-100'>
                 <div className="col-span-4 border border-gray-200 p-4 rounded">
                     <h4 className="text-gray-800 text-lg mb-4 font-medium">ORDER SUMMARY</h4>
                     <ul>
@@ -25,9 +25,9 @@ const Cart = (props) => {
                         </li>
                         {cartProducts.map((data, index) => (
                             <li key={index} className="flex border-b border-gray-200 py-4 mb-4">
-                                <h5 className="text-gray-800 font-medium w-1/2">{data.title}</h5>
-                                <p className="text-gray-600 w-20 text-center px-3">{data.quantity}</p>
-                                <p className="text-gray-800 font-medium w-24 text-center px-3">₱ {data.price}</p>
+                                <h5 className="text-gray-800 font-medium w-1/2 pt-1">{data.title}</h5>
+                                <p className="text-gray-600 w-20 text-center px-3 pt-1">{data.quantity}</p>
+                                <p className="text-gray-800 font-medium w-24 text-center px-3 pt-1">₱ {data.price}</p>
                                 <button onClick={() => handleClickRemove(data)} className='bg-primary text-white w-20 rounded-md p-1'>Remove</button>
                             </li>
                         ))}

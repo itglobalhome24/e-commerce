@@ -13,25 +13,23 @@ const ProductCard = (props) => {
     }
 
     return (
-        <>
-            <div className="bg-white shadow rounded overflow-hidden group">
-                <div onClick={() => handleClickProduct(product_id)} className="relative h-3/5">
-                    <img src={image_url} className="w-full h-full" />
-                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
+        <div className="bg-white shadow rounded overflow-hidden group box-border h-60 sm:h-full">
+            <div onClick={() => handleClickProduct(product_id)} className="relative h-1/2">
+                <img src={image_url} className="w-full h-full" />
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center 
                     justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                    </div>
                 </div>
-                <div className="pt-4 pb-3 px-4">
-                    <h4 onClick={() => handleClickProduct(product_id)} className="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">{name}</h4>
-                    <div className="flex items-baseline mb-1 space-x-2">
-                        <p className="text-xl text-primary font-semibold">₱ {price}</p>
-                    </div>
-                </div>
-                <a href="" onClick={() => handleClickProduct(product_id)} className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
-                    See details
-                </a>
             </div>
-        </>
+            <div className="p-3">
+                <h4 onClick={() => handleClickProduct(product_id)} className="h-8 font-medium truncate text-md text-gray-800 hover:text-primary transition">{name}</h4>
+                <div className="flex items-baseline space-x-2">
+                    <p className="text-xl text-primary font-semibold">₱ {price}</p>
+                </div>
+            </div>
+            <a href="" onClick={() => handleClickProduct(product_id)} className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
+                See details
+            </a>
+        </div>
 
     )
 }

@@ -28,7 +28,7 @@ export default {
         },
         container: {
             center: true,
-            padding: "1rem",
+            // padding: "1rem",
         },
         extend: {
             fontFamily: {

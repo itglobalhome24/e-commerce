@@ -2,98 +2,95 @@ import React from 'react'
 
 const OrderHistory = () => {
     return (
-        <section className="py-24 bg-white">
-            <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
-                <div className="main-data p-8 sm:p-14 bg-gray-50 rounded-3xl">
-                    <h2 className="text-center font-manrope font-semibold text-4xl text-black mb-16">Order History</h2>
-                    <div className="grid grid-cols-8 pb-9">
-                        <div className="col-span-8 lg:col-span-4">
-                            <p className="font-medium text-2xl leading-8 text-primary">Product </p>
-                        </div>
-                        <div className="col-span-1 max-lg:hidden">
-                            <p className="font-medium text-lg leading-8 text-gray-600 text-center">Price </p>
-                        </div>
-                        <div className="col-span-1 max-lg:hidden flex items-center justify-center">
-                            <p className="font-medium text-lg leading-8 text-gray-600">Qty </p>
-                        </div>
-                        <div className="col-span-2 max-lg:hidden">
-                            <p className="font-medium text-lg leading-8 text-gray-500">Delivery Expected by </p>
-                        </div>
-                    </div>
-                    <div
-                        className="box p-8 rounded-3xl bg-gray-100 grid grid-cols-8 mb-7 cursor-pointer transition-all duration-500 hover:bg-indigo-50 max-lg:max-w-xl max-lg:mx-auto">
+        <div className="container py-12 px-5">
+            <div className="w-full mx-auto">
+                <div className="main-data p-4 sm:p-14 bg-gray-50 rounded-3xl">
+                    <h2 className="text-center font-semibold text-4xl text-black mb-4">Order History</h2>
 
+                    {/* Transaction Card */}
+                    <div className="p-8 rounded-3xl bg-gray-100 grid grid-cols-8 mb-7 cursor-pointer transition-all duration-500 hover:bg-indigo-50 max-lg:max-w-xl max-lg:mx-auto">
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 sm:row-span-4 lg:row-span-1">
                             <img src="https://pagedone.io/asset/uploads/1705474950.png" alt="earbuds image" className="max-lg:w-auto max-sm:mx-auto rounded-xl object-cover" />
                         </div>
-                        <div
-                            className="col-span-8 sm:col-span-4 lg:col-span-3 flex h-full justify-center pl-4 flex-col max-lg:items-center">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-3 flex h-full justify-center pl-4 flex-col max-lg:items-center">
                             <h5 className="font-manrope font-semibold text-2xl leading-9 text-black mb-1 whitespace-nowrap">
-                                Apple Airpods Pro</h5>
+                                Apple Airpods Pro
+                            </h5>
                             <p className="font-normal text-base leading-7 text-gray-600 max-md:text-center">White</p>
                         </div>
 
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-between">
+                            <p className="font-semibold text-xl leading-8 text-black">Price:</p>
                             <p className="font-semibold text-xl leading-8 text-black">₱ 249.99</p>
                         </div>
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center ">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-between ">
+                            <p className="font-semibold text-xl leading-8 text-black">Quantity:</p>
                             <p className="font-semibold text-xl leading-8 text-primary">2</p>
                         </div>
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-2 flex items-center justify-center ">
-                            <p className="font-semibold text-xl leading-8 text-black">23rd March 2021</p>
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-2 items-center">
+                            <p className="font-semibold text-xl leading-8 text-black">Delivery Date:</p>
+                            <p className="font-semibold text-xl text-center leading-8 text-black">23rd March 2021</p>
                         </div>
                     </div>
+                    {/* Transaction Card */}
 
-                    <div
-                        className="box p-8 rounded-3xl bg-gray-100 grid grid-cols-8 mb-7 cursor-pointer transition-all duration-500 hover:bg-indigo-50 max-lg:max-w-xl max-lg:mx-auto">
-
+                    {/* Transaction Card */}
+                    <div className="p-8 rounded-3xl bg-gray-100 grid grid-cols-8 mb-7 cursor-pointer transition-all duration-500 hover:bg-indigo-50 max-lg:max-w-xl max-lg:mx-auto">
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 sm:row-span-4 lg:row-span-1">
                             <img src="https://pagedone.io/asset/uploads/1705474950.png" alt="earbuds image" className="max-lg:w-auto max-sm:mx-auto rounded-xl object-cover" />
                         </div>
-                        <div
-                            className="col-span-8 sm:col-span-4 lg:col-span-3 flex h-full justify-center pl-4 flex-col max-lg:items-center">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-3 flex h-full justify-center pl-4 flex-col max-lg:items-center">
                             <h5 className="font-manrope font-semibold text-2xl leading-9 text-black mb-1 whitespace-nowrap">
-                                Apple Airpods Pro</h5>
+                                Apple Airpods Pro
+                            </h5>
                             <p className="font-normal text-base leading-7 text-gray-600 max-md:text-center">White</p>
                         </div>
 
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-between">
+                            <p className="font-semibold text-xl leading-8 text-black">Price:</p>
                             <p className="font-semibold text-xl leading-8 text-black">₱ 249.99</p>
                         </div>
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center ">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-between ">
+                            <p className="font-semibold text-xl leading-8 text-black">Quantity:</p>
                             <p className="font-semibold text-xl leading-8 text-primary">2</p>
                         </div>
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-2 flex items-center justify-center ">
-                            <p className="font-semibold text-xl leading-8 text-black">23rd March 2021</p>
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-2 items-center">
+                            <p className="font-semibold text-xl leading-8 text-black">Delivery Date:</p>
+                            <p className="font-semibold text-xl text-center leading-8 text-black">23rd March 2021</p>
                         </div>
                     </div>
+                    {/* Transaction Card */}
 
-                    <div
-                        className="box p-8 rounded-3xl bg-gray-100 grid grid-cols-8 mb-7 cursor-pointer transition-all duration-500 hover:bg-indigo-50 max-lg:max-w-xl max-lg:mx-auto">
-
+                    {/* Transaction Card */}
+                    <div className="p-8 rounded-3xl bg-gray-100 grid grid-cols-8 mb-7 cursor-pointer transition-all duration-500 hover:bg-indigo-50 max-lg:max-w-xl max-lg:mx-auto">
                         <div className="col-span-8 sm:col-span-4 lg:col-span-1 sm:row-span-4 lg:row-span-1">
                             <img src="https://pagedone.io/asset/uploads/1705474950.png" alt="earbuds image" className="max-lg:w-auto max-sm:mx-auto rounded-xl object-cover" />
                         </div>
-                        <div
-                            className="col-span-8 sm:col-span-4 lg:col-span-3 flex h-full justify-center pl-4 flex-col max-lg:items-center">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-3 flex h-full justify-center pl-4 flex-col max-lg:items-center">
                             <h5 className="font-manrope font-semibold text-2xl leading-9 text-black mb-1 whitespace-nowrap">
-                                Apple Airpods Pro</h5>
+                                Apple Airpods Pro
+                            </h5>
                             <p className="font-normal text-base leading-7 text-gray-600 max-md:text-center">White</p>
                         </div>
 
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-between">
+                            <p className="font-semibold text-xl leading-8 text-black">Price:</p>
                             <p className="font-semibold text-xl leading-8 text-black">₱ 249.99</p>
                         </div>
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-center ">
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-1 flex items-center justify-between ">
+                            <p className="font-semibold text-xl leading-8 text-black">Quantity:</p>
                             <p className="font-semibold text-xl leading-8 text-primary">2</p>
                         </div>
-                        <div className="col-span-8 sm:col-span-4 lg:col-span-2 flex items-center justify-center ">
-                            <p className="font-semibold text-xl leading-8 text-black">23rd March 2021</p>
+                        <div className="col-span-8 sm:col-span-4 lg:col-span-2 items-center">
+                            <p className="font-semibold text-xl leading-8 text-black">Delivery Date:</p>
+                            <p className="font-semibold text-xl text-center leading-8 text-black">23rd March 2021</p>
                         </div>
                     </div>
+                    {/* Transaction Card */}
+
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

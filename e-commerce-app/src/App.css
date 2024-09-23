@@ -6,6 +6,13 @@
     outline: 1px dotted green;
 } */
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
 @layer base {
     body {
         @apply font-poppins;
