@@ -16,21 +16,21 @@ const Cart = (props) => {
 
     return (
         <div className='container'>
-            <div className='box-border my-10 mx-auto bg-slate-100'>
+            <div className='box-border my-10 mx-auto sm:w-1/3 bg-slate-100'>
                 <div className="border border-gray-200 p-4 rounded">
                     <h4 className="text-gray-800 text-lg mb-4 font-medium">ORDER SUMMARY</h4>
                     <ul>
-                        <li className="flex border-b border-gray-200">
-                            <h5 className="text-gray-800 font-semibold w-1/3 mr-3">Product</h5>
-                            <p className="text-gray-800 font-semibold w-20">Quantity</p>
-                            <p className="text-gray-800 font-semibold w-14">Price</p>
+                        <li className="gird grid-cols-4 border-b border-gray-200">
+                            <h5 className="text-gray-800 font-semibold w-1/2 mr-3 col-span-2 inline-block">Product</h5>
+                            <p className="text-gray-800 font-semibold w-20 col-span-1 inline-block">Quantity</p>
+                            <p className="text-gray-800 font-semibold w-14 col-span-1 inline-block">Price</p>
                         </li>
                         {cartProducts.map((data, index) => (
                             <li key={index} className="flex border-b border-gray-200 py-4 mb-4">
                                 <h5 className="text-gray-800 font-medium w-1/2 pt-1">{data.title}</h5>
                                 <p className="text-gray-600 w-20 text-center px-3 pt-1">{data.quantity}</p>
                                 <p className="text-gray-800 font-medium w-24 text-center px-3 pt-1">₱ {data.price}</p>
-                                <button onClick={() => handleClickRemove(data)} className='bg-primary text-white mt-2 w-20 h-1/3 rounded-md p-1'>Remove</button>
+                                <button onClick={() => handleClickRemove(data)} className='bg-primary text-white first-letter:first-line:w-20 h-1/3 rounded-md p-1'>Remove</button>
                             </li>
                         ))}
                     </ul>

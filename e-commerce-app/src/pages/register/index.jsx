@@ -54,8 +54,9 @@ const Register = () => {
                     </div>
                     <div className="mt-4">
                         <button type="submit"
-                            className="block w-full py-2 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">create
-                            account</button>
+                            className="block w-full py-2 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">
+                            create account
+                        </button>
                     </div>
                 </form>
 
@@ -70,8 +71,9 @@ const Register = () => {
                         className="w-1/2 py-2 text-center text-white bg-red-600 rounded uppercase font-roboto font-medium text-sm hover:bg-red-500">google</a>
                 </div>
 
-                <p className="mt-4 text-center text-gray-600">Already have account? <a href="/login"
-                    className="text-primary">Login now</a></p>
+                <p className="mt-4 text-center text-gray-600">Already have account? 
+                    <a href="/login" className="text-primary">Login now</a>
+                </p>
             </div>
         </div>
 
