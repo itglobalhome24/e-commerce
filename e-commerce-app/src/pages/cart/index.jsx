@@ -1,10 +1,12 @@
 import { React, useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
+import SuggestionCard from '../../components/SuggestionCard'
 
 const Cart = (props) => {
     const { cartProducts, removeFromCart, clearCart } = useContext(CartContext)
 
     function handleClickRemove(cartProduct) {
+        console.log(cartProducts)
         removeFromCart(cartProduct)
     }
 
@@ -14,8 +16,8 @@ const Cart = (props) => {
 
     return (
         <div className='container'>
-            <div className='box-border min-w-96 w-1/3 my-10 mx-auto bg-slate-100'>
-                <div className="col-span-4 border border-gray-200 p-4 rounded">
+            <div className='box-border my-10 mx-auto bg-slate-100'>
+                <div className="border border-gray-200 p-4 rounded">
                     <h4 className="text-gray-800 text-lg mb-4 font-medium">ORDER SUMMARY</h4>
                     <ul>
                         <li className="flex border-b border-gray-200">
@@ -38,6 +40,14 @@ const Cart = (props) => {
                         <p>₱ 1280</p>
                     </div>
 
+                    <div className='py-3'>
+                        <p className='text-gray-800 font-medium uppercase'>People also ordered</p>
+                        <div className='flex overflow-x-auto space-x-7'>
+                            {cartProducts.map((data, index) => (
+                                <SuggestionCard key={index} product_id={data.id} name={data.title} image_url={data.images[0]} />
+                            ))}
+                        </div>
+                    </div>
                     <div className="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercase">
                         <p>Shipping</p>
                         <p>Free</p>
@@ -60,9 +70,9 @@ const Cart = (props) => {
                             className="text-primary">terms & conditions</a></label>
                     </div>
                     <button onClick={handleClearCart} className="block w-full py-3 px-4 text-center text-black bg-slate-300 border border-primary rounded-md hover:bg-transparent hover:text-primary transition font-medium mb-4">Clear</button>
-                    <a href="#"
-                        className="block w-full py-3 px-4 text-center text-white bg-primary border border-primary rounded-md hover:bg-transparent hover:text-primary transition font-medium">Place
-                        order</a>
+                    <a href="" className="block w-full py-3 px-4 text-center text-white bg-primary border border-primary rounded-md hover:bg-transparent hover:text-primary transition font-medium">
+                        Place order
+                    </a>
                 </div>
             </div>
         </div>

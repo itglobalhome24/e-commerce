@@ -17,7 +17,8 @@ export default {
         "./src/components/Header.jsx",
         "./src/components/Footer.jsx",
         "./src/components/ProductCard.jsx",
-        "./src/components/CategoryCard.jsx"
+        "./src/components/CategoryCard.jsx",
+        "./src/components/SuggestionCard.jsx"
     ],
     theme: {
         screen: {
