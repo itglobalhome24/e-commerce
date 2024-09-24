@@ -6,7 +6,6 @@ const Cart = (props) => {
     const { cartProducts, removeFromCart, clearCart } = useContext(CartContext)
 
     function handleClickRemove(cartProduct) {
-        console.log(cartProducts)
         removeFromCart(cartProduct)
     }
 
@@ -20,10 +19,11 @@ const Cart = (props) => {
                 <div className="border border-gray-200 p-4 rounded">
                     <h4 className="text-gray-800 text-lg mb-4 font-medium">ORDER SUMMARY</h4>
                     <ul>
-                        <li className="gird grid-cols-4 border-b border-gray-200">
-                            <h5 className="text-gray-800 font-semibold w-1/2 mr-3 col-span-2 inline-block">Product</h5>
-                            <p className="text-gray-800 font-semibold w-20 col-span-1 inline-block">Quantity</p>
-                            <p className="text-gray-800 font-semibold w-14 col-span-1 inline-block">Price</p>
+                        <li className="flex border-b border-gray-200">
+                            <h5 className="text-gray-800 font-semibold w-1/2">Product</h5>
+                            <p className="text-gray-800 font-semibold text-center w-20">Quantity</p>
+                            <p className="text-gray-800 font-semibold text-center w-24">Price</p>
+                            <span className='w-20'></span>
                         </li>
                         {cartProducts.map((data, index) => (
                             <li key={index} className="flex border-b border-gray-200 py-4 mb-4">
