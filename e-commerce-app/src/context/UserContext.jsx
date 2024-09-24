@@ -5,9 +5,13 @@ export const UserContext = createContext()
 
 export const UserContextProvider = ({ children }) => {
 
-    // useState for userData
+    // useState for userData and users
     const user = localStorage.getItem("userData")
-    const activeUser = user ? JSON.parse(user) : []
+    var activeUser = []
+    if (user) {
+        activeUser = JSON.parse(user)
+    }
+
     const [userData, setUserData] = useState(activeUser)
     const [users, setUsers] = useState(usersList)
 
@@ -25,13 +29,15 @@ export const UserContextProvider = ({ children }) => {
     // Login userValidation
     function userValidation(email, password) {
         const user = users.find(users => users.email === email)
+        // validation for password
+
         if (user) {
             localStorage.setItem("userData", JSON.stringify(user))
             setUserData(user)
             return true
-        } else {
-            return false
         }
+
+        return false
     }
 
     return (

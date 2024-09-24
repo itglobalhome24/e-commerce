@@ -19,7 +19,10 @@ export const ProductContextProvider = ({ children }) => {
 
     // useState for Product Detail
     const getProductDetails = localStorage.getItem("productDetails")
-    const activeProductDetails = getProductDetails ? JSON.parse(getProductDetails) : []
+    var activeProductDetails = []
+    if (getProductDetails) {
+        activeProductDetails = JSON.parse(getProductDetails)
+    }
     const [productDetails, setProductDetails] = useState(activeProductDetails)
 
     // Set products to localStorage on the first render.
