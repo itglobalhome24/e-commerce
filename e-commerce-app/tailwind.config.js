@@ -5,6 +5,7 @@ export default {
         "./src/App.jsx",
         "./src/pages/home/index.jsx",
         "./src/pages/categories/index.jsx",
+        "./src/pages/subcategories/Subcategory.jsx",
         "./src/pages/products/index.jsx",
         "./src/pages/product_detail/index.jsx",
         "./src/pages/login/index.jsx",

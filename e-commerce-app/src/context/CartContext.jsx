@@ -17,6 +17,10 @@ export const CartContextProvider = ({ children }) => {
         localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
     }, [cartProducts])
 
+    // useState for cart suggestion
+    const [suggestionAdded, setSuggestionAdded] = useState(false)
+
+
     // Add to cart function
     const addToCart = (item) => {
         const itemInCart = cartProducts.find((cartItem) => cartItem.id === item.id)
@@ -68,7 +72,9 @@ export const CartContextProvider = ({ children }) => {
                     setCartProducts,
                     addToCart,
                     removeFromCart,
-                    clearCart
+                    clearCart,
+                    suggestionAdded,
+                    setSuggestionAdded
                 }
             }
         >

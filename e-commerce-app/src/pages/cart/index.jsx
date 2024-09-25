@@ -1,12 +1,20 @@
 import { React, useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import SuggestionCard from '../../components/SuggestionCard'
+import AccidentInsuranceIcon from "../../assets/images/accident_insurance_icon.jpeg"
 
 const Cart = (props) => {
-    const { cartProducts, removeFromCart, clearCart } = useContext(CartContext)
+    const { cartProducts, removeFromCart, clearCart, suggestionAdded, setSuggestionAdded } = useContext(CartContext)
+
+    console.log(suggestionAdded)
 
     function handleClickRemove(cartProduct) {
         removeFromCart(cartProduct)
+    }
+
+    function handleAddSuggestion() {
+        console.log("clicked")
+        setSuggestionAdded(true)
     }
 
     function handleClearCart() {
@@ -40,18 +48,17 @@ const Cart = (props) => {
                         <p>₱ 1280</p>
                     </div>
 
-                    <div className='py-3'>
-                        <p className='text-gray-800 font-medium uppercase mb-3'>People also ordered</p>
-                        <div className='flex overflow-x-auto space-x-7'>
-                            {cartProducts.map((data, index) => (
-                                <SuggestionCard key={index} product_id={data.id} name={data.title} image_url={data.images[0]} />
-                            ))}
-                        </div>
-                    </div>
-                    <div className="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercase">
-                        <p>Shipping</p>
-                        <p>Free</p>
-                    </div>
+                    {
+                        suggestionAdded == false ?
+                            <div className='py-3'>
+                                <p className='text-gray-800 font-medium uppercase mb-3'>Add items</p>
+                                <div className='flex overflow-x-auto space-x-7'>
+                                    <SuggestionCard onClick={() => { console.log("asdasd"); handleAddSuggestion() }} product_id="" name="Accident Insurance" image_url={AccidentInsuranceIcon} />
+                                </div>
+                            </div>
+                            : null
+                    }
+
 
                     <div className="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercase">
                         <p>Voucher Code</p>

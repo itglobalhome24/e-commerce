@@ -6,6 +6,7 @@ import Home from './pages/home'
 import Login from "./pages/login"
 import Register from "./pages/register"
 import Categories from "./pages/categories"
+import Subcategories from "./pages/subcategories/Subcategories"
 import Products from "./pages/products"
 import ProductDetail from "./pages/product_detail"
 import Cart from "./pages/cart"
@@ -17,6 +18,7 @@ import Footer from "./components/Footer"
 import "./App.css"
 
 function App() {
+
     return (
         <UserContextProvider>
             <ProductContextProvider>
@@ -27,8 +29,9 @@ function App() {
                             <Route path="/" element={<Home />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
-                            <Route path="/products" element={<Categories />} />
-                            <Route path="/products/category" element={<Products />} />
+                            <Route path="/all_products" element={<Categories />} />
+                            <Route path="/products" element={<Subcategories />} />
+                            <Route path="/products/categories" element={<Products />} />
                             <Route path="/products/detail" element={<ProductDetail />} />
                             <Route path="/cart" element={<Cart />} />
                             <Route path="/orders" element={<OrderHistory />} />

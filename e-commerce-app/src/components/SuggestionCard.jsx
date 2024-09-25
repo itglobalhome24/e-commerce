@@ -3,14 +3,14 @@ import { CartContext } from "../context/CartContext"
 import { ProductContext } from '../context/ProductContext'
 
 const SuggestionCard = (props) => {
-    const { product_id, image_url, name } = props
+    const { onClick, product_id, image_url, name } = props
 
     async function handleAddSuggestion(id) {
         // Add to cart by ID
     }
 
     return (
-        <div className="bg-slate-200 shadow rounded group box-border h-22 w-72 flex space-x-2 p-2">
+        <div onClick={onClick} className="bg-slate-200 shadow rounded group box-border h-22 w-72 flex space-x-2 p-2 cursor-pointer">
             <div className="inline-block w-48">
                 <img src={image_url} className="h-16 w-20" />
             </div>

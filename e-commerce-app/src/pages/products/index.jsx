@@ -3,6 +3,7 @@ import ProductCard from '../../components/ProductCard'
 import ProductContext from '../../context/ProductContext'
 
 const Products = (props) => {
+    console.log("at products")
     const { filteredProducts, selectedCategory } = useContext(ProductContext)
 
     return (

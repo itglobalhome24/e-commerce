@@ -26,7 +26,7 @@ const Navbar = (props) => {
                 <div className="container flex items-center justify-between flex-grow px-2 pt-4">
                     <div className="flex items-center space-x-6 capitalize">
                         <a href="/" className="text-gray-200 hover:text-white transition">Home</a>
-                        <a href="/products" className="text-gray-200 hover:text-white transition">Products</a>
+                        <a href="/all_products" className="text-gray-200 hover:text-white transition">Products</a>
                     </div>
                     <div className="flex items-center space-x-3 justify-between capitalize">
                         {

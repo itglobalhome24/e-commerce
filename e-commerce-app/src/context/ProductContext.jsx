@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
-import { productList, categoryList } from '../assets/products.js'
+import { productList, categoryList, subCategoryList } from '../assets/products.js'
 
 export const ProductContext = createContext()
 
@@ -10,6 +10,9 @@ export const ProductContextProvider = ({ children }) => {
 
     // useState for Category List
     const [categories, setCategories] = useState(categoryList)
+
+    // useState for Category List
+    const [subCategories, setSubCategories] = useState(subCategoryList)
 
     // useState for filtered Product List
     const [filteredProducts, setFilteredProducts] = useState([])
@@ -54,6 +57,8 @@ export const ProductContextProvider = ({ children }) => {
                 setProducts,
                 categories,
                 setCategories,
+                subCategories,
+                setSubCategories,
                 filteredProducts,
                 setFilteredProducts,
                 selectedCategory,
