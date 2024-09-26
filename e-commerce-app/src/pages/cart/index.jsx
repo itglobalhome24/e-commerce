@@ -4,7 +4,14 @@ import SuggestionCard from '../../components/SuggestionCard'
 import AccidentInsuranceIcon from "../../assets/images/accident_insurance_icon.jpeg"
 
 const Cart = (props) => {
-    const { cartProducts, removeFromCart, clearCart, suggestionAdded, setSuggestionAdded } = useContext(CartContext)
+    const {
+        cartProducts,
+        addToCart,
+        removeFromCart,
+        clearCart,
+        suggestionAdded,
+        setSuggestionAdded
+    } = useContext(CartContext)
 
     console.log(suggestionAdded)
 
@@ -13,7 +20,19 @@ const Cart = (props) => {
     }
 
     function handleAddSuggestion() {
-        console.log("clicked")
+        const suggestedItem = {
+            id: 'vxujaszda4c3',
+            title: 'Disability Insurance',
+            price: 800,
+            category: 'Accident Insurance',
+            description: 'Accident insurance is a type of insurance plan that pays out when someone is hurt or killed in an accident. This kind of insurance typically excludes coverage for carelessness, divine acts, and natural disasters. The policy may also have restrictions, such as caps on total payouts or prohibitions on payouts for risky behaviours. A lot of insurance providers offer accident insurance, which may be bought separately or added to an existing policy.',
+            images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642282411/SPRING-3/productos/laptop5/laptop5.1_bet4br.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642282413/SPRING-3/productos/laptop5/laptop5.2_p2dfco.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642282416/SPRING-3/productos/laptop5/laptop5.3_hmnoaf.jpg'],
+            banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1642282419/SPRING-3/productos/laptop5/laptop5.4_xsacd8.jpg',
+            brand: '',
+            rate: 3,
+            quantity: 11
+        }
+        addToCart(suggestedItem)
         setSuggestionAdded(true)
     }
 
@@ -53,7 +72,7 @@ const Cart = (props) => {
                             <div className='py-3'>
                                 <p className='text-gray-800 font-medium uppercase mb-3'>Add items</p>
                                 <div className='flex overflow-x-auto space-x-7'>
-                                    <SuggestionCard onClick={() => { console.log("asdasd"); handleAddSuggestion() }} product_id="" name="Accident Insurance" image_url={AccidentInsuranceIcon} />
+                                    <SuggestionCard onClick={() => { handleAddSuggestion() }} product_id="" name="Accident Insurance" image_url={AccidentInsuranceIcon} />
                                 </div>
                             </div>
                             : null
@@ -78,7 +97,7 @@ const Cart = (props) => {
                     </div>
                     <button onClick={handleClearCart} className="block w-full py-3 px-4 text-center text-black bg-slate-300 border border-primary rounded-md hover:bg-transparent hover:text-primary transition font-medium mb-4">Clear</button>
                     <a href="" className="block w-full py-3 px-4 text-center text-white bg-primary border border-primary rounded-md hover:bg-transparent hover:text-primary transition font-medium">
-                        Place order
+                        Checkout
                     </a>
                 </div>
             </div>

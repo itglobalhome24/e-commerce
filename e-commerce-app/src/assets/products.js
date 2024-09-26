@@ -1,3 +1,6 @@
+import motorcycle_insurance_logo from "../assets/images/motorcycle_insurance_logo.jpeg"
+import car_insurance_logo from "../assets/images/car_insurance_logo.jpeg"
+
 export const productList = [
     {
         id: 'zRBijf9EHrDQ',
@@ -5,60 +8,60 @@ export const productList = [
         price: 50,
         category: 'Motorcycle Insurance',
         description: 'Aro de luz regulable: el aro de luz de 10.2 pulgadas cuenta con 3 modos de color de luz: blanco, amarillo cálido, blanco cálido. La temperatura de color de la luz alcanza los 2,200 K-12,000 K. Cada modo tiene 11 niveles de brillo ajustables, 33 opciones en total. Este aro de luz satisfará todas tus necesidades en diferentes escenas.',
-        images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642785148/Productos%20Amazonas/utuszzonwett1uteqlgz.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642785158/Productos%20Amazonas/jurzyeffldfb2njwkbrv.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642785166/Productos%20Amazonas/ksdj7adhw18hpkxbzhc2.jpg'],
+        images: [motorcycle_insurance_logo, 'https://res.cloudinary.com/silviajcn/image/upload/v1642785158/Productos%20Amazonas/jurzyeffldfb2njwkbrv.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642785166/Productos%20Amazonas/ksdj7adhw18hpkxbzhc2.jpg'],
         banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1642785175/Productos%20Amazonas/drkxt0jcihgqjik7kmwp.jpg',
-        brand: 'IKAAMA',
+        brand: '',
         rate: 2,
         quantity: 29
     },
     {
         id: 'k6uzh2fjdmn7',
-        title: 'Comprehensive-TPL',
+        title: 'Motorcycle Comprehensive TPL',
         price: 800,
         category: 'Motorcycle Insurance',
         description: 'Portátil de alto rendimiento: el Chromebook S330 está equipado con un procesador MediaTek MTK8173C, Chrome OS, 4 GB LPDDR3, 64 GB eMMC 5.1 y mucho más -Diseño elegante y elegante: elegante, elegante y seguro, el Lenovo Chromebook S330 es de menos de una pulgada de grosor y 3.3 lbs de luz con una pantalla FHD de 14 pulgadas. Perfecto para la informática diaria y multimedia, en o sin conexión -Procesamiento potente: perfecto para todas tus necesidades de informática diarias, el Lenovo Chromebook S330 ofrece una serie de características de rendimiento. Disfruta de un potente procesamiento para las tareas diarias, memoria LPDDR3 para multitarea, almacenamiento eMMC para arranques rápidos, carga rápida de software y almacenamiento adicional de 100 GB en la nube a través de Google Drive -Construido para conectarlo: el soporte completo de I/O viene estándar en el ordenador portátil con USB-C, micro SD y USB 3.0 para una conectividad sin esfuerzo. Además, este Chromebook también cuenta con un potente WiFi AC 2 x 2 con Bluetooth 4.1, una cámara web de 720p y dos sistemas de altavoces de 2 W para una colaboración sin esfuerzo, todos soportados a través de un conjunto de aplicaciones colaborativas a través de Chrome OS -Fácil de usar: el Lenovo Chromebook S330 es fácil de usar, ofrece protección contra virus integrada y sigue funcionando con batería de larga duración. Además, no se necesita configuración, solo una cuenta de Google para que tus cosas permanezcan contigo a través del almacenamiento en la nube de tus correos electrónicos, mapas, doctores, fotos y más',
-        images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642282411/SPRING-3/productos/laptop5/laptop5.1_bet4br.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642282413/SPRING-3/productos/laptop5/laptop5.2_p2dfco.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642282416/SPRING-3/productos/laptop5/laptop5.3_hmnoaf.jpg'],
+        images: [motorcycle_insurance_logo, 'https://res.cloudinary.com/silviajcn/image/upload/v1642282413/SPRING-3/productos/laptop5/laptop5.2_p2dfco.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642282416/SPRING-3/productos/laptop5/laptop5.3_hmnoaf.jpg'],
         banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1642282419/SPRING-3/productos/laptop5/laptop5.4_xsacd8.jpg',
-        brand: 'Lenovo',
+        brand: '',
         rate: 3,
         quantity: 11
     },
-    // {
-    //     id: 'vxujaszda4c3',
-    //     title: 'Tablet Android',
-    //     price: 230,
-    //     category: 'Tablets',
-    //     description: 'Rendimiento increíble: tableta Android FEONAL con sistema de procesamiento de alta velocidad de 9.0 Pie, chip A7 Quad-Core, 1.3 GHz hace que la tablet tenga una excelente capacidad de respuesta y puede abrir varios videos y aplicaciones sin problemas. Esta tableta es el modelo más popular para 2020, también un regalo perfecto para familiares y amigosMás grande que más grande: la pantalla grande de 10.1 pulgadas con resolución HD de 1280 x 800 aporta cada detalle de película a tus ojos. Almacenamiento interno de 32 GB y 2 GB de RAM con soporte para expansión de hasta 128 GB. Suficiente para usar para que puedas utilizar fácilmente más aplicaciones y almacenar más películas, libros electrónicos, canciones, fotos y otros archivos.Conectividad estable: la tablet portátil soporta tarjetas de teléfono celular enchufables y se puede utilizar fácilmente en entornos sin redes inalámbricas. Compatible con llamadas telefónicas WiFi 2.4G y 3G, la conectividad estable puede ser bien compatible con tu red inalámbrica doméstica. Tarjeta SIM no incluida. Para soporte de red de tarjeta SIM, consulta la descripción del producto]Batería de gran capacidad: batería integrada de 6000 mAh para una vida útil duradera. Una carga completa puede proporcionarte largas horas de lectura, navegar, ver películas y jugar juegos. Con un cuerpo ligero, te hace disfrutar de una tableta portátil en cualquier lugar y en cualquier momento. Carga a través del puerto micro USB.Certificación Google GMS: la tablet FEONAL está certificada por Google GMS. Puede utilizar de forma segura varias funciones de Google, como búsqueda, asistente de voz, Netflix, YouTube, G-mail, Skype, GPS, etc. Esta tableta puede bloquear anuncios no verificados, además de descargar un gran número de aplicaciones de Google Market de forma gratuita.',
-    //     images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642383470/Productos%20Amazonas/pnfeemxgw1gn6zwomjrw.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642383474/Productos%20Amazonas/dn70glmdlp0a3kebhytu.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642383480/Productos%20Amazonas/vz3354fkelfmungtyqse.jpg'],
-    //     banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1642383484/Productos%20Amazonas/xq5poljsmb7b7kszumim.jpg',
-    //     brand: 'FEONAL',
-    //     rate: 2,
-    //     quantity: 38
-    // },
-    // {
-    //     id: 'ajs2210dwqn',
-    //     title: 'Tribit XSound Go Altavoz',
-    //     price: 38,
-    //     category: 'Accessories',
-    //     description: 'Diseño innovador: Hemos diseñado este altavoz para encajar en cualquier estilo de vida estético, con curvas de simplista que es diseñada para encajar perfectamente en la palma de su mano, para soporte de la música a derecho fuera. ultra portabilidad hacen que se puede poner en tu bolso sin esfuerzo. 24 horas de tiempo de juego: una completa de carga permite tu música suelto para hasta 24 horas, por lo que su banda sonora literalmente puede llevar usted durante el día y la noche. Drivers estéreo de sonido dinámico: mejorada con 2 x 6 W, este altavoz ofrece un sonido envolvente con una impresionante unos graves ricos, medios y agudos Crystal Clear ajustado, exactamente la forma a los artistas para que usted no se oye. Impermeable: IPX7 polvo y salpicaduras de resistencia hace de este altavoz Bluetooth listo para cualquier aventura, de piscina lado a las pistas de arena. Siempre conectado: Ultimate estabilidad, con tecnología Bluetooth 4,2 inalámbrica que conecta sus dispositivos en un rango de guiño en su impresionante 66 pies. armado con un micrófono integrado que hace que sea fácil para llamadas en manos libres, Siri y Google Now. soporte entrada AUX.',
-    //     images: ['https://res.cloudinary.com/silviajcn/image/upload/v1683661901/Productos%20Amazonas/a1_ke7na0.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683661901/Productos%20Amazonas/a3_ff4rob.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683661901/Productos%20Amazonas/a2_n3p0jd.jpg'],
-    //     banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1683661902/Productos%20Amazonas/ab_o0fzvp.jpg',
-    //     brand: 'Tribit',
-    //     rate: 4,
-    //     quantity: 2
-    // },
-    // {
-    //     id: '5ylili2ufeku',
-    //     title: 'TCL 20 SE - Teléfono celular',
-    //     price: 250,
-    //     category: 'Cellphones',
-    //     description: 'Rendimiento rápido y suave: siente el tiempo de respuesta instantáneo gracias al procesador Qualcomm Octa-Core. Compatible con redes T-Mobile y AT&T LTE. (Este dispositivo es compatible con la nueva red AT&T el próximo año). Este dispositivo actualmente no está certificado para su uso en Verizon. No es compatible con ninguna red CDMA. (como Verizon, Sprint, Spectrum, Xfinity, etc.)-Experiencia visual cinematográfica cautivadora: disfruta de una impresionante pantalla con colores brillantes y vivos en cualquier lugar con el smartphone TCL 20 SE. Una pantalla en V de 6.82 pulgadas, alimentada por NXVISION muestra tus medios al máximo. Con una relación de pantalla a cuerpo del 90% y una relación de aspecto de 20.5:9 para una visualización óptima en una forma delgada, la pantalla expansiva te proporciona la máxima cantidad de pantalla para transmitir.-Cámara cuádruple inteligente de 48 MP: captura imágenes de alta definición sin esfuerzo con una cámara trasera de 48 MP AI. Captura varias perspectivas con cámaras macro, profundidad y gran angular, además de una impresionante cámara frontal de 13 MP. Cada disparo que tomes será impresionante.-Gran almacenamiento interno de 128 GB: la memoria de 128 GB del teléfono te permite almacenar y acceder a todas las fotos, vídeos, música, libros y archivos que necesitas al instante sin preocuparte por quedarte sin espacio. También puedes añadir hasta 256 GB de memoria con una tarjeta microSD (se vende por separado).-Disfruta más con una batería de 5000 mAh de larga duración: la batería de 5000 mAh te permite disfrutar de tus películas, música y navegar durante horas con una sola carga, mientras que la carga inversa sobre la marcha te permite encender todos tus otros dispositivos. (Nota: este teléfono no es compatible con WiFi 5G, NFC y 5GHz)',
-    //     images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642289949/Productos%20Amazonas/tdsfoquh4fht9tbm2ql4.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642289956/Productos%20Amazonas/nq1gduvp2ogydocixvw7.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642289965/Productos%20Amazonas/lttd8x2tfwnpsqrzw5kg.jpg'],
-    //     banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1642289973/Productos%20Amazonas/yjnsf4fn948jpb4q8fxh.jpg',
-    //     brand: 'TCL',
-    //     rate: 2,
-    //     quantity: 17
-    // },
+    {
+        id: 'vxujaszda4c3',
+        title: 'Disability Insurance',
+        price: 800,
+        category: 'Accident Insurance',
+        description: 'Accident insurance is a type of insurance plan that pays out when someone is hurt or killed in an accident. This kind of insurance typically excludes coverage for carelessness, divine acts, and natural disasters. The policy may also have restrictions, such as caps on total payouts or prohibitions on payouts for risky behaviours. A lot of insurance providers offer accident insurance, which may be bought separately or added to an existing policy.',
+        images: ['https://res.cloudinary.com/silviajcn/image/upload/v1642282411/SPRING-3/productos/laptop5/laptop5.1_bet4br.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642282413/SPRING-3/productos/laptop5/laptop5.2_p2dfco.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642282416/SPRING-3/productos/laptop5/laptop5.3_hmnoaf.jpg'],
+        banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1642282419/SPRING-3/productos/laptop5/laptop5.4_xsacd8.jpg',
+        brand: '',
+        rate: 3,
+        quantity: 11
+    },
+    {
+        id: 'ajs2210dwqn',
+        title: 'Car Comprehensive TPL',
+        price: 38,
+        category: 'Car Insurance',
+        description: 'Diseño innovador: Hemos diseñado este altavoz para encajar en cualquier estilo de vida estético, con curvas de simplista que es diseñada para encajar perfectamente en la palma de su mano, para soporte de la música a derecho fuera. ultra portabilidad hacen que se puede poner en tu bolso sin esfuerzo. 24 horas de tiempo de juego: una completa de carga permite tu música suelto para hasta 24 horas, por lo que su banda sonora literalmente puede llevar usted durante el día y la noche. Drivers estéreo de sonido dinámico: mejorada con 2 x 6 W, este altavoz ofrece un sonido envolvente con una impresionante unos graves ricos, medios y agudos Crystal Clear ajustado, exactamente la forma a los artistas para que usted no se oye. Impermeable: IPX7 polvo y salpicaduras de resistencia hace de este altavoz Bluetooth listo para cualquier aventura, de piscina lado a las pistas de arena. Siempre conectado: Ultimate estabilidad, con tecnología Bluetooth 4,2 inalámbrica que conecta sus dispositivos en un rango de guiño en su impresionante 66 pies. armado con un micrófono integrado que hace que sea fácil para llamadas en manos libres, Siri y Google Now. soporte entrada AUX.',
+        images: [car_insurance_logo, 'https://res.cloudinary.com/silviajcn/image/upload/v1683661901/Productos%20Amazonas/a3_ff4rob.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1683661901/Productos%20Amazonas/a2_n3p0jd.jpg'],
+        banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1683661902/Productos%20Amazonas/ab_o0fzvp.jpg',
+        brand: 'Tribit',
+        rate: 4,
+        quantity: 2
+    },
+    {
+        id: '5ylili2ufeku',
+        title: 'Car TPL',
+        price: 250,
+        category: 'Car Insurance',
+        description: 'Rendimiento rápido y suave: siente el tiempo de respuesta instantáneo gracias al procesador Qualcomm Octa-Core. Compatible con redes T-Mobile y AT&T LTE. (Este dispositivo es compatible con la nueva red AT&T el próximo año). Este dispositivo actualmente no está certificado para su uso en Verizon. No es compatible con ninguna red CDMA. (como Verizon, Sprint, Spectrum, Xfinity, etc.)-Experiencia visual cinematográfica cautivadora: disfruta de una impresionante pantalla con colores brillantes y vivos en cualquier lugar con el smartphone TCL 20 SE. Una pantalla en V de 6.82 pulgadas, alimentada por NXVISION muestra tus medios al máximo. Con una relación de pantalla a cuerpo del 90% y una relación de aspecto de 20.5:9 para una visualización óptima en una forma delgada, la pantalla expansiva te proporciona la máxima cantidad de pantalla para transmitir.-Cámara cuádruple inteligente de 48 MP: captura imágenes de alta definición sin esfuerzo con una cámara trasera de 48 MP AI. Captura varias perspectivas con cámaras macro, profundidad y gran angular, además de una impresionante cámara frontal de 13 MP. Cada disparo que tomes será impresionante.-Gran almacenamiento interno de 128 GB: la memoria de 128 GB del teléfono te permite almacenar y acceder a todas las fotos, vídeos, música, libros y archivos que necesitas al instante sin preocuparte por quedarte sin espacio. También puedes añadir hasta 256 GB de memoria con una tarjeta microSD (se vende por separado).-Disfruta más con una batería de 5000 mAh de larga duración: la batería de 5000 mAh te permite disfrutar de tus películas, música y navegar durante horas con una sola carga, mientras que la carga inversa sobre la marcha te permite encender todos tus otros dispositivos. (Nota: este teléfono no es compatible con WiFi 5G, NFC y 5GHz)',
+        images: [car_insurance_logo, 'https://res.cloudinary.com/silviajcn/image/upload/v1642289956/Productos%20Amazonas/nq1gduvp2ogydocixvw7.jpg', 'https://res.cloudinary.com/silviajcn/image/upload/v1642289965/Productos%20Amazonas/lttd8x2tfwnpsqrzw5kg.jpg'],
+        banner: 'https://res.cloudinary.com/silviajcn/image/upload/v1642289973/Productos%20Amazonas/yjnsf4fn948jpb4q8fxh.jpg',
+        brand: 'TCL',
+        rate: 2,
+        quantity: 17
+    },
     // {
     //     id: 'f5dgpiq57gs0',
     //     title: 'Samsung Galaxy Book Pro',
@@ -702,37 +705,11 @@ export const categoryList = [
         id: 0,
         title: "Motor Insurance",
         image_url: "https://images.pexels.com/photos/39943/pexels-photo-39943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        sub: [
-            {
-                id: 0,
-                title: "Motorcycle Insurance",
-                image_url: "https://images.pexels.com/photos/2549355/pexels-photo-2549355.jpeg"
-            },
-            {
-                id: 1,
-                title: "Car Insurance",
-                image_url: "https://images.pexels.com/photos/2847906/pexels-photo-2847906.jpeg"
-            }
-
-        ]
     },
     {
         id: 1,
         title: "Accident Insurance",
         image_url: "https://images.pexels.com/photos/3719815/pexels-photo-3719815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        sub: [
-            {
-                id: 0,
-                title: "Motorcycle Insurance",
-                image_url: "https://images.pexels.com/photos/2549355/pexels-photo-2549355.jpeg"
-            },
-            {
-                id: 1,
-                title: "Car Insurance",
-                image_url: "https://images.pexels.com/photos/2847906/pexels-photo-2847906.jpeg"
-            }
-
-        ]
     },
     {
         id: 2,
@@ -743,19 +720,6 @@ export const categoryList = [
         id: 3,
         title: "Property Insurance",
         image_url: "https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg",
-        sub: [
-            {
-                id: 0,
-                title: "Motorcycle Insurance",
-                image_url: "https://images.pexels.com/photos/2549355/pexels-photo-2549355.jpeg"
-            },
-            {
-                id: 1,
-                title: "Car Insurance",
-                image_url: "https://images.pexels.com/photos/2847906/pexels-photo-2847906.jpeg"
-            }
-
-        ]
     }
 ]
 

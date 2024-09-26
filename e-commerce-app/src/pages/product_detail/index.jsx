@@ -1,13 +1,16 @@
 import { React, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import ProductContext from '../../context/ProductContext'
 import { CartContext } from '../../context/CartContext'
 
 const ProductDetail = (props) => {
     const { addToCart } = useContext(CartContext)
     const { productDetails } = useContext(ProductContext)
+    const navigate = useNavigate()
 
     function handleAddToCart(productDetails) {
         addToCart(productDetails)
+        navigate("/cart")
     }
 
     return (

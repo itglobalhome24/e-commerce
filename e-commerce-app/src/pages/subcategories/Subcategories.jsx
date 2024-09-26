@@ -15,14 +15,16 @@ const Subcategories = (props) => {
 
     return (
         <div className='container py-8'>
-            {subCategories.map(function (data, index) {
-                if (data.category === subcategory) {
-                    return (
-                        <SubCategoryCard key={index} title={data.title} image_url={data.image_url} />
-                    )
-                }
-                return null
-            })}
+            <div className='grid grid-cols-1 gap-4'>
+                {subCategories.map(function (data, index) {
+                    if (data.category === subcategory) {
+                        return (
+                            <SubCategoryCard key={index} title={data.title} image_url={data.image_url} />
+                        )
+                    }
+                    return null
+                })}
+            </div>
         </div>
     )
 }
