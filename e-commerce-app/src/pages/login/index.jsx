@@ -12,7 +12,7 @@ const Login = (props) => {
         event.preventDefault()
         const loginSuccessful = userValidation(email, password)
         if (loginSuccessful) {
-            navigate("/products")
+            navigate("/all_products")
             return
         }
         alert("Email or password incorrect!")
@@ -65,7 +65,7 @@ const Login = (props) => {
                     <a href=""
                         className="w-1/2 py-2 text-center text-white bg-red-600 rounded uppercase font-roboto font-medium text-sm hover:bg-red-500">google</a>
                 </div>
-                
+
                 <p className="mt-4 text-center text-gray-600">Don't have account? <a href="/register"
                     className="text-primary">Register now</a></p>
             </div>
