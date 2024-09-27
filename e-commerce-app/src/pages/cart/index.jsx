@@ -6,31 +6,15 @@ import AccidentInsuranceIcon from "../../assets/images/accident_insurance_icon.j
 const Cart = (props) => {
     const {
         cartProducts,
-        addToCart,
         removeFromCart,
         clearCart,
         suggestionAdded,
-        setSuggestionAdded
     } = useContext(CartContext)
 
     console.log(suggestionAdded)
 
     function handleClickRemove(cartProduct) {
         removeFromCart(cartProduct)
-    }
-
-    function handleAddSuggestion() {
-        const suggestedItem = {
-            id: 'vxujaszda4c3',
-            title: 'Disability Insurance',
-            price: 800,
-            category: 'Accident Insurance',
-            description: 'Accident insurance is a type of insurance plan that pays out when someone is hurt or killed in an accident. This kind of insurance typically excludes coverage for carelessness, divine acts, and natural disasters. The policy may also have restrictions, such as caps on total payouts or prohibitions on payouts for risky behaviours. A lot of insurance providers offer accident insurance, which may be bought separately or added to an existing policy.',
-            images: ["/src/assets/images/accident_insurance_icon.jpeg"],
-            coverage: ["Accidental Disablement and Dismemberment", "Accidental Medical Reimbursement", "Daily Hospital Confinement Benefit due to Accident (max of 15 days)"]
-        }
-        addToCart(suggestedItem)
-        setSuggestionAdded(true)
     }
 
     function handleClearCart() {
@@ -69,12 +53,11 @@ const Cart = (props) => {
                             <div className='py-3'>
                                 <p className='text-gray-800 font-medium uppercase mb-3'>Add items</p>
                                 <div className='flex overflow-x-auto space-x-7'>
-                                    <SuggestionCard onClick={() => { handleAddSuggestion() }} product_id="" name="Accident Insurance" image_url={AccidentInsuranceIcon} />
+                                    <SuggestionCard onClick={() => { handleAddSuggestion() }} product_id="" name="Disability Insurance" image_url={AccidentInsuranceIcon} />
                                 </div>
                             </div>
                             : null
                     }
-
 
                     <div className="flex justify-between border-b border-gray-200 mt-1 text-gray-800 font-medium py-3 uppercase">
                         <p>Voucher Code</p>

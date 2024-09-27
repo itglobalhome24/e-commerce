@@ -37,7 +37,7 @@ const ProductDetail = (props) => {
                 </div>
 
                 <div>
-                    <p className="space-x-2">The insurance coverage will includethe following protection items:</p>
+                    <p className="space-x-2">The insurance coverage will include the following protection items:</p>
                     {productDetails[0].coverage.map(function (data, index) {
                         return (<p key={index} className='ml-8'>• {data}</p>)
                     })}
@@ -67,7 +67,7 @@ const ProductDetail = (props) => {
 
                     <img src={discountTag} alt="discount_tag" className='w-12 h-12 inline-block relative right-4 bottom-2' />
 
-                    {memberToggled ? <a onClick={() => document.getElementById('my_modal_1').showModal()} className='text-md block text-blue-700 mt-2'>Click here to become a member!</a> : <p className='text-sm mt-2'>Check member price.</p>}
+                    {memberToggled ? <a onClick={() => document.getElementById('my_modal_1').showModal()} className='text-md block text-blue-700 mt-2 cursor-pointer'>Click here to become a member!</a> : <p className='text-sm mt-2'>Check member price.</p>}
 
                     {/* Open the modal using document.getElementById('ID').showModal() method */}
                     <dialog id="my_modal_1" className="modal">
@@ -90,28 +90,49 @@ const ProductDetail = (props) => {
 
                 </div>
 
-                <p className="text-gray-600 my-8">{productDetails[0].description}</p>
+                {/* <p className="text-gray-600 my-8">{productDetails[0].description}</p> */}
 
 
-                <p className='text-center font-medium text-gray-600'>Compare Coverage</p>
+                <p className='text-center font-medium text-gray-600 mb-3 mt-8'>COMPARE COVERAGE</p>
 
-                <div className="flex w-full flex-col lg:flex-row text-gray-600">
-                    <div className="card bg-base-300 rounded-box grid p-3 h-32 flex-grow place-items-start">
-                        <ul>
-                            <li className='font-medium mb-1'>Motorcycle TPL</li>
-                            <li>Voluntary third party liability cover.</li>
-                        </ul>
-                    </div>
+                <div className="overflow-x-auto mb-10">
+                    <table className="table text-gray-600">
+                        {/* head */}
+                        <thead className='text-base'>
+                            <tr>
+                                <th className='border border-gray-600'>
+                                    <div className='flex justify-between'>
+                                        <p>TPL</p>
+                                        <p>₱ 300</p>
+                                    </div>
+                                </th>
 
-                    <div className="card bg-base-300 rounded-box grid h-32 p-3 flex-grow place-items-start">
-                        <ul>
-                            <li className='font-medium mb-1'>Motorcycle Comprehensive TPL</li>
-                            <li>Own damage and theft of the unit.</li>
-                            <li>Voluntary third party liability cover.</li>
-                            <li>2-seat Unnamed passenger personal accident.</li>
-                        </ul>
-
-                    </div>
+                                <th className='border border-gray-600'>
+                                    <div className='flex justify-between'>
+                                        <p>Comprehensive TPL</p>
+                                        <p>₱ 300</p>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            <tr className="bg-base-200">
+                                <td className='border border-gray-600 pr-0'>Voluntary third party liability cover.</td>
+                                <td className='border border-gray-600 pr-0'>Voluntary third party liability cover.</td>
+                            </tr>
+                            {/* row 2 */}
+                            <tr>
+                                <td className='border border-gray-600 pr-0'></td>
+                                <td className='border border-gray-600 pr-0'>Own damage and theft of the unit.</td>
+                            </tr>
+                            {/* row 3 */}
+                            <tr>
+                                <td className='border border-gray-600 pr-0'></td>
+                                <td className='border border-gray-600 '>2-seat Unnamed passenger personal accident.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div className="mt-2 flex gap-3 border-b border-gray-200 pb-6">
