@@ -2,6 +2,7 @@ import { React, useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ProductContext from '../../context/ProductContext'
 import { CartContext } from '../../context/CartContext'
+import discountTag from "../../assets/images/discount_tag.png"
 
 const ProductDetail = (props) => {
     const { addToCart } = useContext(CartContext)
@@ -29,10 +30,6 @@ const ProductDetail = (props) => {
             <div>
                 <h2 className="text-3xl font-medium uppercase mb-2">{productDetails[0].title}</h2>
                 <div className="space-y-2 mb-6">
-                    <p className="text-gray-800 font-semibold space-x-2">
-                        <span>Availability: </span>
-                        <span className="text-green-600">In Stock</span>
-                    </p>
                     <p className="space-x-2 mb-11">
                         <span className="text-gray-800 font-semibold">Category: </span>
                         <span className="text-gray-600">{productDetails[0].category}</span>
@@ -48,7 +45,14 @@ const ProductDetail = (props) => {
 
                 <div className='h-28'>
                     <div className="flex items-baseline mb-3 space-x-2 font-roboto mt-4">
-                        <p className="text-2xl text-primary font-semibold">₱ {memberToggled ? (productDetails[0].price - 200) : productDetails[0].price}</p>
+                        {
+                            memberToggled ?
+                                <>
+                                    <p className="text-xl text-primary font-semibold line-through">₱{productDetails[0].price}</p>
+                                    <p className="text-2xl text-primary font-semibold">₱{(productDetails[0].price - 100)}</p>
+                                </> :
+                                <p className="text-2xl text-primary font-semibold">₱ {productDetails[0].price}</p>
+                        }
                     </div>
 
                     <label className="relative inline-flex cursor-pointer items-center box-border">
@@ -60,16 +64,60 @@ const ProductDetail = (props) => {
                             <span>Member</span>
                         </div>
                     </label>
-                    {memberToggled ? <a href="" className='text-md block text-blue-700 mt-2'>Click here to become a member!</a> : <p className='text-sm mt-2'>Check member price.</p>}
+
+                    <img src={discountTag} alt="discount_tag" className='w-12 h-12 inline-block relative right-4 bottom-2' />
+
+                    {memberToggled ? <a onClick={() => document.getElementById('my_modal_1').showModal()} className='text-md block text-blue-700 mt-2'>Click here to become a member!</a> : <p className='text-sm mt-2'>Check member price.</p>}
+
+                    {/* Open the modal using document.getElementById('ID').showModal() method */}
+                    <dialog id="my_modal_1" className="modal">
+                        <div className="modal-box bg-white">
+                            <h3 className="font-bold text-lg">Become a member!</h3>
+                            <p className="py-2">Enter your name and contact number.</p>
+                            <div className="modal-action w-full inline-block">
+                                <form method="dialog">
+                                    <input type="text" placeholder="Full name" className="input input-bordered border-gray-400 w-full mb-3" />
+                                    <input type="text" placeholder="Contact number" className="input input-bordered border-gray-400 w-full mb-3" />
+                                    {/* if there is a button in form, it will close the modal */}
+                                    <div className='flex justify-end'>
+                                        <button className="btn bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition">Submit</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
 
                 </div>
 
-                <p className="mt-4 text-gray-600">{productDetails[0].description}</p>
+                <p className="text-gray-600 my-8">{productDetails[0].description}</p>
 
-                <div className="mt-6 flex gap-3 border-b border-gray-200 pb-5 pt-5">
+
+                <p className='text-center font-medium text-gray-600'>Compare Coverage</p>
+
+                <div className="flex w-full flex-col lg:flex-row text-gray-600">
+                    <div className="card bg-base-300 rounded-box grid p-3 h-32 flex-grow place-items-start">
+                        <ul>
+                            <li className='font-medium mb-1'>Motorcycle TPL</li>
+                            <li>Voluntary third party liability cover.</li>
+                        </ul>
+                    </div>
+
+                    <div className="card bg-base-300 rounded-box grid h-32 p-3 flex-grow place-items-start">
+                        <ul>
+                            <li className='font-medium mb-1'>Motorcycle Comprehensive TPL</li>
+                            <li>Own damage and theft of the unit.</li>
+                            <li>Voluntary third party liability cover.</li>
+                            <li>2-seat Unnamed passenger personal accident.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div className="mt-2 flex gap-3 border-b border-gray-200 pb-6">
                     <a href="" onClick={() => handleAddToCart(productDetails[0])}
                         className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition">
-                        <i className="fa-solid fa-bag-shopping"></i> Add to cart
+                        <i className="fa-solid fa-bag-shopping"></i> Proceed
                     </a>
                 </div>
             </div>

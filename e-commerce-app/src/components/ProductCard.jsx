@@ -27,7 +27,7 @@ const ProductCard = (props) => {
                 </div>
             </div>
             <a href="" onClick={() => handleClickProduct(product_id)} className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
-                See details
+                See Details
             </a>
         </div>
 

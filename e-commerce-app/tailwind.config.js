@@ -30,7 +30,6 @@ export default {
         },
         container: {
             center: true,
-            // padding: "1rem",
         },
         extend: {
             fontFamily: {
@@ -43,5 +42,10 @@ export default {
             },
         }
     },
-    plugins: [],
+    daisyui: {
+        themes: [],
+    },
+    plugins: [
+        require('daisyui'),
+    ],
 }
