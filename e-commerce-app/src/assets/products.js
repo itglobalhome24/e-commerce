@@ -36,6 +36,7 @@ export const productList = [
         category: 'Car Insurance',
         description: 'Diseño innovador: Hemos diseñado este altavoz para encajar en cualquier estilo de vida estético, con curvas de simplista que es diseñada para encajar perfectamente en la palma de su mano, para soporte de la música a derecho fuera. ultra portabilidad hacen que se puede poner en tu bolso sin esfuerzo. 24 horas de tiempo de juego: una completa de carga permite tu música suelto para hasta 24 horas.',
         images: [car_insurance_logo],
+        coverage: ["Own damage and theft of the unit.", "Voluntary third party liability cover.", "2-seat Unnamed passenger personal accident."]
     },
     {
         id: '5ylili2ufeku',
@@ -44,6 +45,7 @@ export const productList = [
         category: 'Car Insurance',
         description: 'Rendimiento rápido y suave: siente el tiempo de respuesta instantáneo gracias al procesador Qualcomm Octa-Core. Compatible con redes T-Mobile y AT&T LTE. (Este dispositivo es compatible con la nueva red AT&T el próximo año). Este dispositivo actualmente no está certificado para su uso en Verizon. No es compatible con ninguna red CDMA.',
         images: [car_insurance_logo],
+        coverage: ["Own damage and theft of the unit.", "Voluntary third party liability cover.", "2-seat Unnamed passenger personal accident."]
     }
 ]
 
