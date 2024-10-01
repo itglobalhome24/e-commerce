@@ -110,7 +110,7 @@ const ProductDetail = (props) => {
                                 <th className='border border-gray-600'>
                                     <div className='flex justify-between'>
                                         <p>Comprehensive TPL</p>
-                                        <p>₱ 300</p>
+                                        <p>₱ 800</p>
                                     </div>
                                 </th>
                             </tr>
